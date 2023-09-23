@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { hogwartsStudentRegistry } from "./data";
 
 function App() {
   return (
