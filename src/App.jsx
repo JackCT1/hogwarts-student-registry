@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { hogwartsStudentRegistry } from "./data";
 import Student from "./components/student";
+import StudentForm from "./components/StudentForm";
 
 function App() {
   const studentComponents = [];
@@ -20,7 +21,9 @@ function App() {
     <div className="App">
       <header className="title">Potions Class</header>
       <div className="app-wrapper">
-        <div className="app-lhs-container"></div>
+        <div className="app-lhs-container">
+          <StudentForm />
+        </div>
         <div className="app-rhs-container">
           <div className="register-wrapper">
             <h1 id="register-component-header">Register</h1>
