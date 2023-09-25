@@ -5,6 +5,7 @@ import Student from "./components/student";
 import StudentForm from "./components/StudentForm";
 
 function App() {
+  const [students, setStudents] = useState(hogwartsStudentRegistry);
   const studentComponents = [];
   {
     hogwartsStudentRegistry.forEach((student) => {
@@ -17,12 +18,24 @@ function App() {
       );
     });
   }
+
+  const addStudent = (event) => {
+    event.preventDefault();
+    let newStudent = {
+      name: "",
+      house: "",
+      time: new Date().toUTCString(),
+      isLate: false,
+    };
+    setStudents([...students, newStudent]);
+  };
+
   return (
     <div className="App">
       <header className="title">Potions Class</header>
       <div className="app-wrapper">
         <div className="app-lhs-container">
-          <StudentForm />
+          <StudentForm addStudent={addStudent} />
         </div>
         <div className="app-rhs-container">
           <div className="register-wrapper">
