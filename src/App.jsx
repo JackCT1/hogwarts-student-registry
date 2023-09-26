@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { hogwartsStudentRegistry } from "./data";
-import Student from "./components/student";
+import Student from "./components/Student";
 import StudentForm from "./components/StudentForm";
 
 function App() {
