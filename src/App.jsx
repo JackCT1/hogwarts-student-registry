@@ -8,7 +8,7 @@ function App() {
   const [students, setStudents] = useState(hogwartsStudentRegistry);
   const studentComponents = [];
   {
-    hogwartsStudentRegistry.forEach((student) => {
+    students.forEach((student) => {
       studentComponents.push(
         <Student
           name={student.name}
@@ -22,12 +22,16 @@ function App() {
   const addStudent = (event) => {
     event.preventDefault();
     let newStudent = {
-      name: "",
-      house: "",
+      id: students.length + 1,
+      name: event.target.name.value,
+      house: event.target.house.value,
       time: new Date().toUTCString(),
       isLate: false,
     };
     setStudents([...students, newStudent]);
+    console.log(students);
+    console.log(event.target.name.value);
+    return students;
   };
 
   return (
@@ -35,7 +39,9 @@ function App() {
       <header className="title">Potions Class</header>
       <div className="app-wrapper">
         <div className="app-lhs-container">
-          <StudentForm addStudent={addStudent} />
+          <div className="form-wrapper">
+            <StudentForm addStudent={addStudent} />
+          </div>
         </div>
         <div className="app-rhs-container">
           <div className="register-wrapper">
