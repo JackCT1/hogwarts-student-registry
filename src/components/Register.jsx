@@ -1,6 +1,4 @@
-import Student from "./Student";
-
-export default function Register() {
+export default function Register({ studentComponents }) {
   return (
     <div className="register-wrapper">
       <h1 id="register-component-header">Register</h1>
