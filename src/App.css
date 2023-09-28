@@ -188,7 +188,7 @@ select {
 }
 
 .student-record-class-info {
-  text-align: center;
+  text-align: left;
   float: right;
   margin-left: 1.5em;
 }

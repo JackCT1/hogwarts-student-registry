@@ -16,7 +16,7 @@ function App() {
       time: new Date().toUTCString(),
       isLate: false,
     };
-    setStudents([...students, newStudent]);
+    setStudents([newStudent, ...students]);
     console.log(students);
     console.log(event.target.name.value);
     return students;
