@@ -1,10 +1,10 @@
-export default function Student({ name, house, time }) {
+export default function Student({ name, house, time, isLate }) {
   return (
     <div className="student-record">
       <div className="student-record-info">
         <div className={"student-record-house-badge"}>
           <img
-            src={`../../public/images/${house}.png`}
+            src={`/images/${house}.png`}
             alt="House Badge"
             width={100}
             height={100}

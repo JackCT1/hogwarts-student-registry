@@ -1,24 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 import { hogwartsStudentRegistry } from "./data";
-import Student from "./components/Student";
 import StudentForm from "./components/StudentForm";
 import Register from "./components/Register";
 
 function App() {
   const [students, setStudents] = useState(hogwartsStudentRegistry);
-  const studentComponents = [];
-  {
-    students.forEach((student) => {
-      studentComponents.push(
-        <Student
-          name={student.name}
-          house={student.house}
-          time={student.time}
-        />
-      );
-    });
-  }
 
   const addStudent = (event) => {
     event.preventDefault();
@@ -43,7 +30,7 @@ function App() {
           <StudentForm addStudent={addStudent} />
         </div>
         <div className="app-rhs-container">
-          <Register studentComponents={studentComponents} />
+          <Register students={students} />
         </div>
       </div>
     </div>
