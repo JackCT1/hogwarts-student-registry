@@ -17,12 +17,13 @@ export default function StudentForm({ addStudent }) {
           House
         </label>
         <br />
-        <input
-          type="text"
-          id="house"
-          name="house"
-          className="form-item form-field"
-        />
+        <select name="house" id="house" className="form-item form-field">
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Sort Me!">Sort Me!</option>
+        </select>
         <br />
         <input
           type="submit"
